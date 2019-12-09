@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Apply for job by Colorlib</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Orders</h2>
+                </div>
+                <div class="card-body">
+                    <form name="orders">
+                        <div class="form-row">
+                            <div class="name">Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" id="description" required type="text" name="description">
+                                </div>
+                                <div class="errors">
+                                        <label id="error-description-length">Don't exceed 100 characters</label>
+                                        <label id="error-description-incomplete">Field incomplete</label>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Amount</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" id="amount" type="number" required name="number" placeholder="0,00">
+                                </div>
+                                <div class="errors">
+                                    <label id="error-amount-incomplete">Field incomplete</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Discount</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" id="discount" type="number" required name="number" placeholder="0,00">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <button class="btn btn--radius-2 btn--blue-2" id="button-save">Send Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+
+    <!-- Main JS-->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

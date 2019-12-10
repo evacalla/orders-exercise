@@ -26,6 +26,7 @@ public class OrderResource {
         this.orderService = orderService;
     }
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity post(@Valid @RequestBody OrderVO vo){
         orderService.save(vo);

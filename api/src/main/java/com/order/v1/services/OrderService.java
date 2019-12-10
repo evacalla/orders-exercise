@@ -2,6 +2,7 @@ package com.order.v1.services;
 
 import com.order.cache.BumexMemcached;
 import com.order.dao.OrderDao;
+import com.order.daoImpl.OrderDaoImpl;
 import com.order.domain.Order;
 import com.order.exception.OrderBadRequestException;
 import com.order.exception.OrderNotFoundException;
@@ -10,6 +11,7 @@ import com.order.v1.vo.OrderVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -21,8 +23,7 @@ import java.util.Optional;
 public class OrderService {
 
     private BumexMemcached bumexMemcached = BumexMemcached.getInstance();
-    private OrderDao dao;
-
+    private OrderDao dao = new OrderDaoImpl();
 
     public void save(OrderVO vo){
         Order order = this.convert2(vo);
